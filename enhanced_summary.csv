@@ -1,0 +1,8 @@
+Test Type,Total Requests,Successful Requests,Success Count,Success Rate (%),Avg Response Time (s),Median Response Time (s),P90 Response Time (s),P95 Response Time (s),P99 Response Time (s),Min Response Time (s),Max Response Time (s),Std Dev Response Time,Test Duration (s),Throughput (req/s),Total Bytes Received,Avg Bytes per Request,Error Breakdown,Failure Detection Rate (%)
+Load Test (1 users),6,6,0,0.0,10.009,10.002,10.023,10.032,10.039,10.001,10.041,0.016,50.532,0.119,0,0.0,{'timeout': 6},
+Load Test (5 users),30,30,0,0.0,10.001,10.001,10.003,10.003,10.004,10.0,10.004,0.001,50.543,0.594,0,0.0,{'timeout': 30},
+Load Test (10 users),60,60,0,0.0,10.001,10.001,10.003,10.003,10.004,10.0,10.005,0.001,50.587,1.186,0,0.0,{'timeout': 60},
+Load Test (20 users),120,120,0,0.0,10.001,10.001,10.003,10.004,10.005,10.0,10.005,0.001,50.605,2.371,0,0.0,{'timeout': 120},
+Failure Injection,15,15,15,,3.482,5.001,5.005,5.005,5.005,0.001,5.005,2.083,47.284,0.317,0,0.0,"{'timeout': 9, 'connection_error': 6}",100.0
+Rate Limit Test,250,250,0,0.0,5.002,5.002,5.003,5.004,5.009,5.0,5.014,0.001,120.214,2.08,0,0.0,{'timeout': 250},
+Stability Test,25,25,0,0.0,10.002,10.002,10.005,10.005,10.006,10.001,10.006,0.002,288.194,0.087,0,0.0,{'timeout': 25},
