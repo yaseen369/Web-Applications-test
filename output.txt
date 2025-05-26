@@ -1,0 +1,90 @@
+🚀 Performance Testing Tool v2.1 - Fixed Edition
+==================================================
+📊 Collecting baseline system metrics...
+📊 Baseline - CPU: 4.2%, RAM: 50.9%
+
+Enter target URLs (comma-separated):
+www.neu.edu.tr
+✅ Added target: https://www.neu.edu.tr
+
+Select tests to run:
+1 - Load Test (multiple concurrent user levels)
+2 - Failure Injection Test (test error handling)
+3 - Rate Limit Test (burst testing)
+4 - Stability Test (long-running)
+5 - All Tests
+6 - Custom Configuration
+Enter choice (e.g., 1,3,4 or 5 for all): 5
+
+📍 Running tests on https://www.neu.edu.tr
+----------------------------------------
+🚀 Starting Load Test for https://www.neu.edu.tr
+📈 Testing with 1 concurrent users...
+   📊 1 users: 0/6 successful (0.0%), avg response: 0.000s
+📈 Testing with 5 concurrent users...
+   📊 5 users: 0/30 successful (0.0%), avg response: 0.000s
+📈 Testing with 10 concurrent users...
+   📊 10 users: 0/60 successful (0.0%), avg response: 0.000s
+📈 Testing with 20 concurrent users...
+   📊 20 users: 0/120 successful (0.0%), avg response: 0.000s
+🔧 Starting Failure Injection Test for https://www.neu.edu.tr
+   🎯 Testing scenario: Missing Endpoint: /not-found
+   🎯 Testing scenario: Missing Endpoint: /timeout
+   🎯 Testing scenario: Missing Endpoint: /error
+   🎯 Testing scenario: Invalid Host: http://invalid.local
+   🎯 Testing scenario: Invalid Host: http://timeout.test
+   📊 Failure detection: 15/15 scenarios failed as expected (100.0%)
+⚡ Starting Rate Limit Test for https://www.neu.edu.tr
+   🌊 Sending burst of 250 requests...
+   📊 Results: 0 successful, 0 rate-limited, 250 other errors
+   ⚠️ No rate limiting detected - server accepted all 250 rapid requests
+📈 Starting Stability Test for https://www.neu.edu.tr (300s duration)
+   ⏱️ 178s elapsed: 0/15 successful (0.0%)
+   📊 Final: 0/25 successful (0.0%), avg response: 10.002s
+
+🔄 Processing results...
+📄 Test results saved to: test_results.csv
+📄 System metrics saved to: system_metrics.csv
+
+🔍 Data Validation Results:
+   ⚠️ Found 3 potential response time outliers
+   ✅ Data validation complete
+
+📊 Generating reports...
+📊 Enhanced graphs saved to: enhanced_graphs.png
+
+📊 Enhanced Summary by Test Type:
+
+           Test Type  Total Requests  Success Count  Avg Response Time (s)  P95 Response Time (s)  Throughput (req/s)
+ Load Test (1 users)               6              0                 10.009                 10.032             
+  0.119
+ Load Test (5 users)              30              0                 10.001                 10.003             
+  0.594
+Load Test (10 users)              60              0                 10.001                 10.003             
+  1.186
+Load Test (20 users)             120              0                 10.001                 10.004             
+  2.371
+   Failure Injection              15             15                  3.482                  5.005             
+  0.317
+     Rate Limit Test             250              0                  5.002                  5.004             
+  2.080
+      Stability Test              25              0                 10.002                 10.005             
+  0.087
+
+📄 Enhanced summary saved to: enhanced_summary.csv
+📊 Enhanced PDF report saved to: enhanced_test_report.pdf
+
+🎉 Testing Complete! Results available in:
+📁 test_results.db - SQLite database
+📁 test_results.csv - Test results
+📁 system_metrics.csv - System metrics
+📁 enhanced_test_report.pdf - Comprehensive report
+📁 enhanced_summary.csv - Detailed summary
+📁 enhanced_graphs.png - Performance visualizations
+
+📋 Quick Summary:
+- Fixed success rate calculations for all test types
+- Improved timeout handling to show actual response times
+- Enhanced failure injection test logic
+- Consistent rate limit detection and reporting
+- Better error analysis and recommendations
