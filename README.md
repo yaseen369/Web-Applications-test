@@ -2,7 +2,7 @@
 
 ## 📊 Universal Web App & Bot Performance Tester
 
-**Note:** The attached files represent a performance test conducted on **www.neu.edu.tr**. This website was selected as a target for its public accessibility and the potential to simulate real-world traffic patterns on an educational institution's web presence. Testing a site like this can provide valuable insights into its stability and responsiveness under various loads, which is crucial for high-traffic public-facing platforms.
+**Note:** The attached files - represent the output of the code -  performance test conducted on **www.neu.edu.tr**. This website was selected as a target for its public accessibility and the potential to simulate real-world traffic patterns on an educational institution's web presence. Testing a site like this can provide valuable insights into its stability and responsiveness under various loads, which is crucial for high-traffic public-facing platforms.
 
 A general-purpose automated testing tool to evaluate the **performance and reliability** of web apps, APIs, and bots.
 
