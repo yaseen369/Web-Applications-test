@@ -104,12 +104,12 @@ def collect_baseline_metrics():
     print(f"📊 Baseline - CPU: {baseline_metrics['cpu']:.1f}%, RAM: {baseline_metrics['ram']:.1f}%")
 
 def monitor_system_resources():
-    global monitoring_active
+    global monitoring_active 
     
     net_io_start = psutil.net_io_counters()
     disk_io_start = psutil.disk_io_counters()
     
-    while monitoring_active:
+    while monitoring_active: 
         try:
             cpu_percent = psutil.cpu_percent(interval=0.1)
             ram_percent = psutil.virtual_memory().percent
